@@ -1,1 +1,21 @@
-<p>por-capital works!</p>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-pais-input 
+        (onEnter)="buscar($event)"
+        (onDebounce)="sugerencia($event)"
+        [recivetextoPlaceholder]="enviotextoPlaceholder"
+        >
+        </app-pais-input>
+    </div>
+</div>
+<hr>
+<div *ngIf="error" class="aler alert-danger">
+    no se encontro nada con el {{this.termino}}
+</div>
+
+<div class="row" *ngIf="(countries.length > 0)">
+    <div class="col">
+        <app-pais-tabla [countries]="countries"></app-pais-tabla>
+    </div>
+</div>

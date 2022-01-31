@@ -1,1 +1,11 @@
-<p>por-region works!</p>
+<div class="row">
+    <div class="col">
+
+        <button (click)="asignar(region); obtenerPorRegion(region)" [class]="conditionalClass(region)" *ngFor="let region of regiones">
+            {{region}}
+        </button>
+
+    </div>
+    <app-pais-tabla [countries]="data"></app-pais-tabla>
+
+</div>

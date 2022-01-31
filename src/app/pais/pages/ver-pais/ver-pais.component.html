@@ -1,1 +1,13 @@
-<p>ver-pais works!</p>
+<h1 *ngIf="!country; else divpais " style="background-color: red">
+    cargandooool.....
+</h1>
+<ng-template #divpais>
+    <h1>pais</h1>
+    <div>
+        <h1>paisen div</h1>
+
+        <span>
+            {{country.name.common}}
+        </span>
+    </div>
+</ng-template>
